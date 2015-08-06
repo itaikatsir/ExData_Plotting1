@@ -14,8 +14,8 @@ dataSub$Datetime <- as.POSIXct(datetime)
 
 # Plot 2
 op <- par(no.readonly = TRUE)
-plot(dataSub$Global_active_power~dataSub$Datetime, type="l",
-     ylab="Global Active Power (kilowatts)", cex.axis = 0.75, xlab="", cex.lab=0.5)
-dev.copy(png, file="plot2.png", height=480, width=480)
+png(filename='plot2.png',width=480,height=480,units='px')
+plot(dataSub$Datetime, dataSub$Global_active_power, type="l",
+     ylab="Global Active Power (kilowatts)", xlab="")
 dev.off()
 par(op)
